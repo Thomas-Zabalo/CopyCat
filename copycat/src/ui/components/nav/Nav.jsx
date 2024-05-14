@@ -23,7 +23,7 @@ export default function Nav() {
               key={item.name}
               href={item.href}
               aria-current={item.current ? 'page' : undefined}
-              className="text-black hover:text-gray-600"
+              className="text-gray-500 hover:text-gray-600 text-lg"
             >
               {item.name}
             </a>
