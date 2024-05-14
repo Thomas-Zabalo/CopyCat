@@ -1,4 +1,6 @@
 import React from 'react'
+import { GlobeAltIcon, MapPinIcon, HeartIcon, UserIcon, ShoppingBagIcon } from '@heroicons/react/24/solid'
+import Search from '../Search';
 
 const navigation = [
   { name: 'Homme', href: '#', current: true },
@@ -11,42 +13,50 @@ const navigation = [
 
 export default function Nav() {
   return (
-    <div className="min-h-full flex flex-col justify-center my-4">
+    <div className="min-h-full flex flex-col justify-center my-6 ms-4">
       <div className="flex h-16 items-center justify-between">
-        <div className="flex items-center justify-center w-full space-x-4">
 
-          {/* Menu catégories */}
-          <div className="ml-10 flex items-baseline space-x-4">
-            {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                aria-current={item.current ? 'page' : undefined}
-                className="text-gray-600 hover:text-gray-800"
-              >
-                {item.name}
-              </a>
-            ))}
-          </div>
+        {/* Menu catégories */}
+        <div className="flex items-baseline space-x-4">
+          {navigation.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              aria-current={item.current ? 'page' : undefined}
+              className="text-black hover:text-gray-600"
+            >
+              {item.name}
+            </a>
+          ))}
+        </div>
 
-          {/* Logo Lafuma */}
-          <div className="flex-shrink-0">
+        {/* Logo Lafuma */}
+        <div className="flex justify-center items-center">
+          <a href="#">
             <img
-              className="h-8 w-8"
+              className="h-auto w-auto"
               src="https://www.lafuma.com/logo-4Aj.svg"
               alt="Your Company"
             />
+          </a>
+        </div>
+
+        {/* Zone de recherche */}
+        <div>
+          <Search />
+        </div>
+
+        {/* Widget site*/}
+        <div className="flex items-center space-x-4">
+          <GlobeAltIcon className="h-6 w-6 text-black hover:text-gray-600" />
+          <MapPinIcon className="h-6 w-6 text-black hover:text-gray-600" />
+          <HeartIcon className="h-6 w-6 text-black hover:text-gray-600" />
+          <UserIcon className="h-6 w-6 text-black hover:text-gray-600" />
+          <div className="bg-orange-600  p-10">
+            <ShoppingBagIcon className="h-6 w-6 text-white hover:text-gray-200" />
           </div>
-
-          {/* Zone de recherche */}
-
-          {/* Widget site*/}
-
         </div>
       </div>
     </div>
-
-
-
   );
 }
