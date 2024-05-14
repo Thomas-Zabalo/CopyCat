@@ -33,7 +33,7 @@ export default function NavActu() {
             </div>
 
             <div>
-                <p className='text-white'>
+                <p className='text-white Arial'>
                     Livraison offerte dès 50€ | Retours gratuits en France
                 </p>
             </div>
