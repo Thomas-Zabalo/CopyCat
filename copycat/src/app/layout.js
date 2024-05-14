@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/ui/components/nav/Nav";
 import Message from "@/ui/components/Message";
+import NavActu from "@/ui/components/nav/NavActu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div className={inter.className}>
+          <NavActu />
           <Nav />
           <Message />
           {children}
