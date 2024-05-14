@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Georgia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Noto+Serif+Georgian:wght@100..900&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -20,6 +22,26 @@
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.Arial,
+a {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
 }
 
 .bg-image {
