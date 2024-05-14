@@ -13,7 +13,7 @@ const navigation = [
 
 export default function Nav() {
   return (
-    <div className="min-h-full flex flex-col justify-center my-6 ms-4">
+    <div className="min-h-full flex flex-col justify-center my-5 ms-4">
       <div className="flex h-16 items-center justify-between">
 
         {/* Menu catégories */}
