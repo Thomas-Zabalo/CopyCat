@@ -13,7 +13,7 @@ export default function Message() {
     return (
         <div id="hidden" className="relative flex items-center justify-center py-3 px-3 bg-gray-100">
             <div className=" font-normal text-center">
-                <p>
+                <p className=' text-lg'>
                     Notre entrepôt fait peau neuve pour mieux vous servir. Pendant cette période, les livraisons peuvent être légèrement retardées.
                 </p>
             </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link';
 
 const navigation = [
     { name: 'Outlet', href: '#', current: true },
@@ -14,20 +15,20 @@ navigation.forEach((item, index) => {
     }
 
     navLinks.push(
-        <a
+        <Link
             key={item.name}
             href={item.href}
             aria-current={item.current ? 'page' : undefined}
             className="text-white hover:text-gray-200"
         >
             {item.name}
-        </a>
+        </Link>
     );
 });
 
 export default function NavActu() {
     return (
-        <div className="flex justify-between bg-[#30302f] px-6 py-2 text-sm font-xs">
+        <div className="lg:flex sm:hidden hidden justify-between bg-[#30302f] px-6 py-2 text-sm font-xs">
             <div className="flex items-baseline space-x-4">
               {navLinks}
             </div>

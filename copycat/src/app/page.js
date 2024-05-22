@@ -1,11 +1,12 @@
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
+import Carousel from "@/ui/components/carousel/Carousel";
 
 export default function Home() {
   return (
     <div>
       <div className="bg-image">
-        <div className="pt-24 pl-7">
+        <div className="pt-24 pl-8">
           <h1 className="text-5xl  font-bold leading-none">
             La multi-activité,
             <br />
@@ -79,41 +80,43 @@ export default function Home() {
         </section>
 
         <section className="py-2">
-
+          <Carousel />
         </section>
 
 
-        <section className="grid grid-cols-2 gap-12 bg-blue-100 py-24 mx-auto">
-          <div className="flex flex-col justify-center">
-            <figure className="">
+        <section className="flex gap-1 justify-between bg-blue-100 py-24 px-52">
+          <div className="relative flex flex-col justify-end">
+            <figure className="relative">
               <a href="#">
                 <picture>
-                  <img src="/assets/velo_2.webp" title="" alt="" loading="lazy" width="640" height="800" />
+                  <img src="/assets/velo_2.webp" title="" alt="" loading="lazy" width="680" height="800" />
                 </picture>
               </a>
             </figure>
-            <p className="text-3xl font-semibold mt-2">
+            <p className="absolute bottom-0 left-0 text-3xl font-semibold m-8">
               Sac à dos Active,
               <br />les plus légers
               <br />et polyvalents
             </p>
           </div>
 
-          <div className="flex flex-col justify-center">
-            <figure className="">
+          <div className="relative flex flex-col justify-end">
+            <figure className="relative">
               <a href="#">
                 <picture>
-                  <img src="/assets/velo_3.webp" title="" alt="" loading="lazy" width="640" height="800" />
+                  <img src="/assets/velo_3.webp" title="" alt="" loading="lazy" width="680" height="800" />
                 </picture>
               </a>
             </figure>
-            <p className="text-3xl font-semibold mt-2">
+            <p className="text-white absolute bottom-0 left-0 text-3xl font-semibold m-8">
               Dryway :
               <br />confort, légèrete
               <br />et respirabiltié
             </p>
           </div>
         </section>
+
+
 
       </main>
     </div >

@@ -5,8 +5,10 @@ import "slick-carousel/slick/slick-theme.css"
 import "slick-carousel/slick/slick.css"
 
 import Nav from "@/ui/components/nav/Nav";
-import Message from "@/ui/components/Message";
+import Message from "@/ui/components/nav/Message";
 import NavActu from "@/ui/components/nav/NavActu";
+import Footer from "@/ui/components/footer/Footer";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,22 +19,22 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <head>
-        
+
         <link
           href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&display=swap"
           rel="stylesheet"
         />
-      
       </head>
       <body>
-        <div className={inter.className}>
-          <NavActu />
-          <Nav />
-          <Message />
-          {children}
-        </div>
+        {/* <NavActu />
+        <Nav /> */}
+        <Message />
+        {children}
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );

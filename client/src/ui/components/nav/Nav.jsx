@@ -1,14 +1,16 @@
 import React from 'react'
 import { GlobeAltIcon, MapPinIcon, HeartIcon, UserIcon, ShoppingBagIcon } from '@heroicons/react/24/solid'
-import Search from '../Search';
+import Search from './Search';
+import Link from 'next/link';
+
 
 const navigation = [
-  { name: 'Homme', href: '#', current: true },
-  { name: 'Femme', href: '#', current: false },
-  { name: 'Enfant', href: '#', current: false },
-  { name: 'Chaussures', href: '#', current: false },
-  { name: 'Sacs et équipements', href: '#', current: false },
-  { name: 'Activités', href: '#', current: false },
+  { name: 'Homme', href: '/produit', current: true },
+  { name: 'Femme', href: '/produit', current: false },
+  { name: 'Enfant', href: '/produit', current: false },
+  { name: 'Chaussures', href: '/produit', current: false },
+  { name: 'Sacs et équipements', href: '/produit', current: false },
+  { name: 'Activités', href: '/produit', current: false },
 ]
 
 export default function Nav() {
@@ -19,26 +21,26 @@ export default function Nav() {
         {/* Menu catégories */}
         <div className="flex items-baseline space-x-4">
           {navigation.map((item) => (
-            <a
+            <Link
               key={item.name}
               href={item.href}
               aria-current={item.current ? 'page' : undefined}
               className="text-gray-500 hover:text-gray-600 text-lg"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
 
         {/* Logo Lafuma */}
         <div className="flex justify-center items-center">
-          <a href="#">
+          <Link href="/#">
             <img
               className="h-auto w-auto"
               src="https://www.lafuma.com/logo-4Aj.svg"
               alt="Your Company"
             />
-          </a>
+          </Link>
         </div>
 
         {/* Zone de recherche */}
@@ -60,3 +62,4 @@ export default function Nav() {
     </div>
   );
 }
+

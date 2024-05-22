@@ -45,7 +45,7 @@ a {
 }
 
 .bg-image {
-  background-image: url('../assets/header-velo_1.webp');
+  background-image: url('../../public/assets/header-velo_1.webp');
   background-size: cover;
   background-position: center;
   min-height: 36vw;

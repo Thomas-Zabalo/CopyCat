@@ -50,3 +50,68 @@ a {
   background-position: center;
   min-height: 36vw;
 }
+
+.banner {
+  background-image: url("/assets/bandeau.webp");
+  background-size: cover;
+  min-height: 31vw;
+  background-repeat: no-repeat;
+}
+
+.banner {
+  position: relative;
+  /* Add this line */
+}
+
+.banner::after {
+  background: #e84f1e;
+  content: '';
+  display: var(--mmg-display-push-rectangle, block);
+  /* Add default value */
+  height: 60%;
+  left: -5px;
+  position: absolute;
+  top: 25%;
+  width: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .trait::before {
+    background-color: #e84f1e;
+    content: '';
+    display: var(--display-decorative-color-lines-display, block);
+    height: 150px;
+    left: 75px;
+    position: absolute;
+    top: -35px;
+    width: 1px;
+    z-index: 1;
+  }
+
+  .text-banner::before {
+    background-color: #e84f1e;
+    content: '';
+    display: var(--display-decorative-color-lines-display, block);
+    height: 150px;
+    left: 150px;
+    position: absolute;
+    top: -85px;
+    width: 1px;
+    z-index: 1;
+  }
+}
+
+
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+  .text-banner::before {
+    background-color: #e84f1e;
+    content: '';
+    display: var(--display-decorative-color-lines-display, block);
+    height: 150px;
+    left: 150px;
+    position: absolute;
+    top: -85px;
+    width: 1px;
+    z-index: 1;
+  }
+}

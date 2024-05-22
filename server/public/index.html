@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Bonjour
+    <script>
+        fetch('/api/produit')
+            .then(response => response.json())
+            .then(dataJSON => {
+                console.log(dataJSON);
+            })
+            .catch(error => {
+                console.error('Error fetching products:', error);
+            });
+    </script>
+</body>
+
+</html>
