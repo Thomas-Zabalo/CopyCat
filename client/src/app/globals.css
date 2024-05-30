@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Georgia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Noto+Serif+Georgian:wght@100..900&display=swap');
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.Arial,
+a {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+}
+
+.bg-image {
+  background-image: url('../../public/assets/header-velo_1.webp');
+  background-size: cover;
+  background-position: center;
+  min-height: 36vw;
+}
+
+.banner {
+  background-image: url("/assets/bandeau.webp");
+  background-size: cover;
+  min-height: 31vw;
+  background-repeat: no-repeat;
+}
+
+.banner {
+  position: relative;
+  /* Add this line */
+}
+
+.banner::after {
+  background: #e84f1e;
+  content: '';
+  display: var(--mmg-display-push-rectangle, block);
+  /* Add default value */
+  height: 60%;
+  left: -5px;
+  position: absolute;
+  top: 25%;
+  width: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .trait::before {
+    background-color: #e84f1e;
+    content: '';
+    display: var(--display-decorative-color-lines-display, block);
+    height: 150px;
+    left: 75px;
+    position: absolute;
+    top: -35px;
+    width: 1px;
+    z-index: 1;
+  }
+
+  .text-banner::before {
+    background-color: #e84f1e;
+    content: '';
+    display: var(--display-decorative-color-lines-display, block);
+    height: 150px;
+    left: 150px;
+    position: absolute;
+    top: -85px;
+    width: 1px;
+    z-index: 1;
+  }
+}
+
+
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+  .text-banner::before {
+    background-color: #e84f1e;
+    content: '';
+    display: var(--display-decorative-color-lines-display, block);
+    height: 150px;
+    left: 150px;
+    position: absolute;
+    top: -85px;
+    width: 1px;
+    z-index: 1;
+  }
+}
