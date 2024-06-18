@@ -14,10 +14,10 @@ app.use(cors({
 
 // Connexion avec la bd
 const connection = mysql.createConnection({
-    host: 'mysql-zabalo.alwaysdata.net',
-    user: 'zabalo',
-    password: 'Voiture82',
-    database: "zabalo_copycat"
+    host: '',
+    user: '',
+    password: '',
+    database: ""
 });
 
 // Connexion avec MySQL 
